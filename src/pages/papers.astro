@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import papersData from '../data/papers-2024-2026.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+const sorted = [...papersData.papers].sort((a, b) => (b.year || 0) - (a.year || 0));
+---
+
+<BaseLayout
+  title="Research papers 2024–2026"
+  description="Curated Uganda extractives research published 2024–2026 with links and topics."
+  current="papers"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Literature registry</p>
+    <h1>{papersData.meta.title}</h1>
+    <p>{papersData.meta.inclusion_criteria}</p>
+    <p><a href="/map">View business-value resource map</a></p>
+  </section>
+
+  <ul class="cite-list">
+    {sorted.map((p) => (
+      <li>
+        <span class="tag">{p.year}</span>
+        <span class="tag">{p.type.replace(/_/g, ' ')}</span>
+        <span class="tag">{p.source_tier}</span>
+        <p>
+          <strong>{p.authors}</strong> — <em>{p.title}</em>
+          {p.journal ? `. ${p.journal}` : ''}
+        </p>
+        {p.url && (
+          <p>
+            <a href={p.url} rel="noopener noreferrer">{p.url}</a>
+          </p>
+        )}
+        <p>
+          <strong>Topics:</strong> {p.topics.join(', ')}
+        </p>
+        {p.notes && <p>{p.notes}</p>}
+      </li>
+    ))}
+  </ul>
+
+  <article class="card">
+    <h2>Suggested search strings (add papers via GitHub)</h2>
+    <ul>
+      <li><code>Uganda AND ("glass sand" OR silica) AND Lake Victoria</code></li>
+      <li><code>Uganda AND "development minerals" AND 2024</code></li>
+      <li><code>Uganda AND Kilembe AND copper</code></li>
+      <li><code>Uganda AND "artisanal mining" AND gold AND 2025</code></li>
+    </ul>
+    <p>
+      Edit <code>src/data/papers-2024-2026.json</code> and link papers to map entries via
+      <code>recent_paper_ids</code> in <code>resource-map.json</code>.
+    </p>
+  </article>
+</BaseLayout>

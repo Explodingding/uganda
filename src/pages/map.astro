@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import mapData from '../data/resource-map.json';
+import bibliography from '../data/bibliography.json';
+import papers from '../data/papers-2024-2026.json';
+
+const bibLite = JSON.stringify(
+  Object.fromEntries(bibliography.map((b) => [b.id, { title: b.title, url: b.url }]))
+);
+const papersLite = JSON.stringify(
+  Object.fromEntries(papers.papers.map((p) => [p.id, { year: p.year, title: p.title, url: p.url }]))
+);
+const mapJson = JSON.stringify(mapData);
+---
+
+<BaseLayout
+  title="Resource map"
+  description="Uganda natural resources mapped by district, ranked by documented business value (2024–2026 sources)."
+  current="map"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Business value ranking · 2024–2026 evidence</p>
+    <h1>{mapData.meta.title}</h1>
+    <p>{mapData.meta.ranking_method}</p>
+    <div class="notice">
+      <strong>Note:</strong> {mapData.meta.disclaimer}
+    </div>
+  </section>
+
+  <div class="map-layout">
+    <div id="uganda-map" class="map-container" aria-label="Interactive map of Uganda mineral resources"></div>
+    <aside class="map-legend card">
+      <h2>Value tiers</h2>
+      {mapData.value_tiers.map((t) => (
+        <p class="legend-row">
+          <span class="legend-dot" style={`background:${t.color}`}></span>
+          <strong>{t.label}</strong> — {t.description}
+        </p>
+      ))}
+      <h2>Ranked resources</h2>
+      <ol class="rank-list">
+        {mapData.resources
+          .sort((a, b) => a.business_value_rank - b.business_value_rank)
+          .map((r) => (
+            <li>
+              <span class="rank-num">{r.business_value_rank}</span>
+              <button type="button" class="rank-link" data-focus={r.id}>
+                {r.name}
+              </button>
+              <span class="tag">Tier {r.value_tier}</span>
+            </li>
+          ))}
+      </ol>
+      <p><a href="/papers">Papers 2024–2026</a> · <a href="/catalog">Full catalog</a></p>
+    </aside>
+  </div>
+
+  <section id="resource-detail" class="card" hidden>
+    <h2 id="detail-title"></h2>
+    <p id="detail-indicator"></p>
+    <p id="detail-districts"></p>
+    <h3>Sources</h3>
+    <ul id="detail-sources"></ul>
+    <h3>Recent research (2024–2026)</h3>
+    <ul id="detail-papers"></ul>
+  </section>
+</BaseLayout>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script define:vars={{ mapJson, bibLite, papersLite }}>
+  const data = JSON.parse(mapJson);
+  const bibById = JSON.parse(bibLite);
+  const paperById = JSON.parse(papersLite);
+  const detailPanel = document.getElementById('resource-detail');
+  const detailTitle = document.getElementById('detail-title');
+  const detailIndicator = document.getElementById('detail-indicator');
+  const detailDistricts = document.getElementById('detail-districts');
+  const detailSources = document.getElementById('detail-sources');
+  const detailPapers = document.getElementById('detail-papers');
+
+  const map = L.map('uganda-map', { scrollWheelZoom: true }).setView(
+    data.meta.map_center,
+    data.meta.map_zoom
+  );
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  const tierColors = Object.fromEntries(data.value_tiers.map((t) => [t.id, t.color]));
+  const layers = {};
+
+  function showDetail(resource) {
+    detailPanel.hidden = false;
+    detailTitle.textContent = `#${resource.business_value_rank} — ${resource.name}`;
+    detailIndicator.textContent = resource.economic_indicator;
+    detailDistricts.textContent = `Districts: ${resource.districts.join(', ')}`;
+    detailSources.innerHTML = '';
+    resource.source_ids.forEach((sid) => {
+      const li = document.createElement('li');
+      const ref = bibById[sid];
+      if (ref?.url) {
+        const a = document.createElement('a');
+        a.href = ref.url;
+        a.textContent = ref.title;
+        li.appendChild(a);
+      } else {
+        li.textContent = sid;
+      }
+      detailSources.appendChild(li);
+    });
+    detailPapers.innerHTML = '';
+    if (!resource.recent_paper_ids?.length) {
+      const li = document.createElement('li');
+      li.textContent = 'No 2024–2026 paper linked yet — see /papers registry.';
+      detailPapers.appendChild(li);
+    } else {
+      resource.recent_paper_ids.forEach((pid) => {
+        const p = paperById[pid];
+        const li = document.createElement('li');
+        if (p?.url) {
+          const a = document.createElement('a');
+          a.href = p.url;
+          a.textContent = `${p.year}: ${p.title}`;
+          li.appendChild(a);
+        } else {
+          li.textContent = pid;
+        }
+        detailPapers.appendChild(li);
+      });
+    }
+    detailPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  data.resources.forEach((resource) => {
+    const color = tierColors[resource.value_tier] || '#333';
+    const group = L.layerGroup();
+    resource.locations.forEach((loc) => {
+      const marker = L.circleMarker([loc.lat, loc.lon], {
+        radius: 10,
+        fillColor: color,
+        color: '#1a2e1f',
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.85,
+      });
+      marker.bindPopup(
+        `<strong>#${resource.business_value_rank} ${resource.name}</strong><br/>${loc.label}<br/><em>Tier ${resource.value_tier}</em>`
+      );
+      marker.on('click', () => showDetail(resource));
+      marker.addTo(group);
+    });
+    group.addTo(map);
+    layers[resource.id] = group;
+  });
+
+  document.querySelectorAll('.rank-link').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-focus');
+      const resource = data.resources.find((r) => r.id === id);
+      if (!resource?.locations?.length) return;
+      const loc = resource.locations[0];
+      map.setView([loc.lat, loc.lon], 9);
+      showDetail(resource);
+    });
+  });
+</script>
+
+<style>
+  .map-layout {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 900px) {
+    .map-layout {
+      grid-template-columns: 1fr 320px;
+    }
+  }
+  .map-container {
+    height: 520px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    z-index: 0;
+  }
+  .legend-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+  }
+  .rank-list {
+    padding-left: 0;
+    list-style: none;
+    font-size: 0.92rem;
+  }
+  .rank-list li {
+    margin-bottom: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .rank-num {
+    font-weight: 700;
+    color: var(--muted);
+    min-width: 1.5rem;
+  }
+  .rank-link {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--accent);
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+    text-decoration: underline;
+  }
+</style>

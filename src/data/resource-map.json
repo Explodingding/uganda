@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "Uganda natural resources — map by business value",
+    "ranking_method": "Ordered by documented economic scale: (1) export/trade receipts where officially reported, (2) national production value and GDP share, (3) DGSM strategic deposits and industrial linkage. Coordinates are district/occurrence centroids for mapping — not concession boundaries.",
+    "disclaimer": "Gold export values include significant re-export/refining activity per Bank of Uganda and World Bank. Rankings show fiscal/commercial weight, not environmental priority or sustainable development score.",
+    "map_center": [1.37, 32.3],
+    "map_zoom": 7,
+    "last_updated": "2026-06-02"
+  },
+  "value_tiers": [
+    {
+      "id": 1,
+      "label": "Tier 1 — Dominant trade & fiscal value",
+      "color": "#b8860b",
+      "description": "Largest export receipts or hydrocarbon sector scale."
+    },
+    {
+      "id": 2,
+      "label": "Tier 2 — Strategic industry & major reserves",
+      "color": "#1f6b4a",
+      "description": "Large deposits, refineries, or cement/fertilizer backbone."
+    },
+    {
+      "id": 3,
+      "label": "Tier 3 — Significant production / ASM value",
+      "color": "#3d6b8c",
+      "description": "Active mining with substantial employment or production value."
+    },
+    {
+      "id": 4,
+      "label": "Tier 4 — High potential, lower current monetization",
+      "color": "#6b5b4f",
+      "description": "Documented resources (e.g. glass sand) with unrealized industrial projects."
+    }
+  ],
+  "resources": [
+    {
+      "id": "gold",
+      "name": "Gold",
+      "business_value_rank": 1,
+      "value_tier": 1,
+      "economic_indicator": "FY2023/24 gold export receipts ≈ US$3.09B (gross); net exports ≈ US$478M after raw gold imports (Ministry of Finance).",
+      "districts": ["Busia", "Mubende", "Buhweju", "Karamoja", "Isingiro"],
+      "locations": [
+        { "label": "Busia / Wagagai area", "lat": 0.46, "lon": 34.09 },
+        { "label": "Mubende", "lat": 0.56, "lon": 31.39 },
+        { "label": "Buhweju (Nyakishenyi)", "lat": -0.35, "lon": 30.42 },
+        { "label": "Moroto (Karamoja)", "lat": 2.53, "lon": 34.67 }
+      ],
+      "source_ids": ["mfp-uganda-fy2324", "worldbank-uganda-macro-2025", "dgsm-2024-mineral-potential", "ucem-2024-statement"],
+      "recent_paper_ids": ["mak-gold-nyakishenyi-2026"]
+    },
+    {
+      "id": "petroleum-albertine",
+      "name": "Petroleum (Albertine Graben)",
+      "business_value_rank": 2,
+      "value_tier": 1,
+      "economic_indicator": "Lake Albert development (Tilenga/Kingfisher); dominant energy sector FDI — export via pipeline infrastructure.",
+      "districts": ["Hoima", "Buliisa", "Kikuube", "Nwoya"],
+      "locations": [
+        { "label": "Hoima (refinery corridor)", "lat": 1.43, "lon": 31.35 },
+        { "label": "Buliisa / Kingfisher area", "lat": 2.05, "lon": 31.42 }
+      ],
+      "source_ids": ["springer-albertine-oil-2025", "dgsm-2024-mineral-potential"],
+      "recent_paper_ids": ["springer-albertine-oil-2025"]
+    },
+    {
+      "id": "copper-cobalt-kilembe",
+      "name": "Copper & cobalt (Kilembe)",
+      "business_value_rank": 3,
+      "value_tier": 2,
+      "economic_indicator": "Historic flagship mine; government-led revival bids (Kasese). Strategic for electrification supply chains.",
+      "districts": ["Kasese"],
+      "locations": [{ "label": "Kilembe Mines", "lat": -0.22, "lon": 30.0 }],
+      "source_ids": ["dgsm-2024-mineral-potential", "ucem-2024-statement"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "tin",
+      "name": "Tin",
+      "business_value_rank": 4,
+      "value_tier": 2,
+      "economic_indicator": "Refineries (e.g. Mbarara); government cites ~3.5 Mt tin ore resources (verify via MEMD/DGSM before citing reserves).",
+      "districts": ["Mbarara", "Ntungamo", "Isingiro"],
+      "locations": [
+        { "label": "Ruti refinery area (Mbarara)", "lat": -0.61, "lon": 30.65 },
+        { "label": "Ruhaama (Ntungamo)", "lat": -0.87, "lon": 30.26 }
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential", "ucem-2024-statement"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "iron-ore",
+      "name": "Iron ore",
+      "business_value_rank": 5,
+      "value_tier": 2,
+      "economic_indicator": "DGSM reports >150 Mt at Muko (60–65% Fe) and large Sukulu/Bukusu complexes — steel value chain potential.",
+      "districts": ["Kabale", "Kisoro", "Kanungu", "Tororo", "Moroto"],
+      "locations": [
+        { "label": "Muko (Kabale)", "lat": -1.2, "lon": 30.2 },
+        { "label": "Sukulu / Tororo", "lat": 0.69, "lon": 34.18 }
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential", "ucem-2024-statement"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "phosphate-sukulu",
+      "name": "Phosphate (Sukulu)",
+      "business_value_rank": 6,
+      "value_tier": 2,
+      "economic_indicator": "Fertilizer feedstock; DGSM flags Sukulu as strategically important phosphate-niobium complex.",
+      "districts": ["Tororo"],
+      "locations": [{ "label": "Sukulu complex", "lat": 0.75, "lon": 34.25 }],
+      "source_ids": ["dgsm-2024-mineral-potential"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "limestone-cement",
+      "name": "Limestone & cement",
+      "business_value_rank": 7,
+      "value_tier": 2,
+      "economic_indicator": "Major industrial mineral by production volume (Hima, Tororo); drives construction sector inputs.",
+      "districts": ["Kasese", "Tororo", "Moroto", "Kamwenge"],
+      "locations": [
+        { "label": "Hima Cement (Kasese)", "lat": -0.15, "lon": 30.12 },
+        { "label": "Tororo Cement", "lat": 0.69, "lon": 34.18 }
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential", "delve-2018-baseline-vol1", "ucem-2024-statement"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "vermiculite",
+      "name": "Vermiculite",
+      "business_value_rank": 8,
+      "value_tier": 3,
+      "economic_indicator": "DGSM/UCEM: Namekhara reserves cited ≈54.9 Mt; active industrial mineral exports.",
+      "districts": ["Manafwa", "Mbale"],
+      "locations": [{ "label": "Namekhara / Bukusu", "lat": 0.95, "lon": 34.35 }],
+      "source_ids": ["dgsm-2024-mineral-potential", "mdpi-vermiculite-2022"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "wolfram-tungsten",
+      "name": "Tungsten (wolfram)",
+      "business_value_rank": 9,
+      "value_tier": 3,
+      "economic_indicator": "Listed in UCEM priority minerals; production value growth in FY2021/22 national statistics (UCEM).",
+      "districts": ["Southwest", "Western"],
+      "locations": [{ "label": "Southwest Uganda (general)", "lat": -0.5, "lon": 30.0 }],
+      "source_ids": ["ucem-2024-statement", "dgsm-2024-mineral-potential"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "salt-katwe",
+      "name": "Salt (Lake Katwe)",
+      "business_value_rank": 10,
+      "value_tier": 3,
+      "economic_indicator": "Artisanal salt production; local employment (DELVE); lower unit export value than metals.",
+      "districts": ["Kasese"],
+      "locations": [{ "label": "Lake Katwe", "lat": -0.13, "lon": 30.12 }],
+      "source_ids": ["delve-2018-baseline-vol1"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "construction-sand",
+      "name": "Construction sand & aggregates",
+      "business_value_rank": 11,
+      "value_tier": 3,
+      "economic_indicator": "ASM sector: UCEM cites ~US$850M ASM production value (sector-wide, not sand alone).",
+      "districts": ["Kalungu", "Mpigi", "Wakiso", "Masaka"],
+      "locations": [
+        { "label": "Lwera wetland corridor", "lat": -0.12, "lon": 31.85 },
+        { "label": "Greater Kampala aggregate pits", "lat": 0.35, "lon": 32.55 }
+      ],
+      "source_ids": ["ucem-2024-statement", "mak-lwera-wetland-gis", "delve-2018-baseline-vol1"],
+      "recent_paper_ids": ["odongo-nalwenkomba-2024"]
+    },
+    {
+      "id": "glass-sand",
+      "name": "High-purity silica (glass) sand",
+      "business_value_rank": 12,
+      "value_tier": 4,
+      "economic_indicator": "High strategic value for import substitution; limited realized revenue vs gold (Diimu project stalled).",
+      "districts": ["Masaka", "Rakai", "Mukono", "Buvuma"],
+      "locations": [
+        { "label": "Diimu / Bukakata", "lat": -0.33, "lon": 31.73 },
+        { "label": "Kome Islands", "lat": -0.55, "lon": 33.2 }
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential", "nerc-wc92078"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "niobium-tantalite",
+      "name": "Niobium / tantalite (coltan)",
+      "business_value_rank": 13,
+      "value_tier": 3,
+      "economic_indicator": "DGSM: Sukulu niobium; columbite in Ntungamo/Bushenyi — technology metals.",
+      "districts": ["Tororo", "Ntungamo", "Bushenyi"],
+      "locations": [{ "label": "Ntungamo", "lat": -0.87, "lon": 30.26 }],
+      "source_ids": ["dgsm-2024-mineral-potential"],
+      "recent_paper_ids": []
+    },
+    {
+      "id": "dimension-stone",
+      "name": "Dimension stone & marble",
+      "business_value_rank": 14,
+      "value_tier": 3,
+      "economic_indicator": "Widespread ASM quarries (DELVE); regional construction demand.",
+      "districts": ["Central", "Eastern", "Southwest"],
+      "locations": [{ "label": "Central Region quarries", "lat": 0.35, "lon": 32.5 }],
+      "source_ids": ["delve-2018-baseline-vol1"],
+      "recent_paper_ids": []
+    }
+  ]
+}

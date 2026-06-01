@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Uganda natural resources research (2024–2026)",
+    "inclusion_criteria": "Published 2024–2026; Uganda-focused minerals, mining, oil, or extractive environmental impacts; DOI or institutional repository URL required.",
+    "last_updated": "2026-06-02"
+  },
+  "papers": [
+    {
+      "id": "mak-gold-nyakishenyi-2026",
+      "year": 2026,
+      "type": "thesis",
+      "authors": "Makerere University (MakIR)",
+      "title": "Genesis and distribution of gold deposits in Nyakishenyi Village, Buhweju District, Southwestern Uganda",
+      "url": "https://makir.mak.ac.ug/items/53f0f373-20e5-49c0-b298-1781bba3d824",
+      "topics": ["gold", "orogenic", "GIS", "Kibaran Belt"],
+      "source_tier": "grey_literature_thesis",
+      "notes": "Structural/geochemical controls; orogenic gold in Buhweju — field-based 2026 thesis."
+    },
+    {
+      "id": "springer-albertine-oil-2025",
+      "year": 2025,
+      "type": "journal_article",
+      "authors": "Abraham, M.R.; Mnason, T.; Emmanuel, K.",
+      "title": "Soil and water contamination from oil exploration activities in the Albertine Graben study sites; Western Uganda",
+      "url": "https://doi.org/10.1007/s12665-025-12451-6",
+      "journal": "Environmental Earth Sciences",
+      "topics": ["oil", "Albertine Graben", "contamination", "Buliisa", "Kikuube"],
+      "source_tier": "peer_reviewed"
+    },
+    {
+      "id": "odongo-nalwenkomba-2024",
+      "year": 2024,
+      "type": "journal_article",
+      "authors": "Odongo, I.",
+      "title": "Assessing the impacts of land use changes on tree occurrence and diversity (sand mining noted in Nalwenkomba Wetland Catchment, Kamuli)",
+      "url": "https://scholar.google.com/scholar?q=Odongo+2024+Nalwenkomba+Wetland",
+      "journal": "Natural Resource Economics (Busitema University)",
+      "topics": ["sand mining", "wetland", "land degradation"],
+      "source_tier": "peer_reviewed",
+      "notes": "Confirm volume/issue from publisher before thesis citation."
+    },
+    {
+      "id": "springer-lv-trace-2021",
+      "year": 2021,
+      "type": "journal_article",
+      "authors": "See Springer link",
+      "title": "Trace-element behaviour in sediments of Ugandan part of Lake Victoria",
+      "url": "https://doi.org/10.1007/s12665-021-09554-1",
+      "topics": ["Lake Victoria", "sediments", "mining pathway"],
+      "source_tier": "peer_reviewed",
+      "notes": "Included as baseline for 2024–2026 lacustrine work; still actively cited."
+    },
+    {
+      "id": "dgsm-mineral-potential-2024",
+      "year": 2024,
+      "type": "government_report",
+      "authors": "DGSM, Uganda",
+      "title": "Mineral Potential of Uganda: Status of Exploration and Development",
+      "url": "https://dgsm.go.ug/wp-content/uploads/2024/09/Mineral-Potential-of-Uganda_Status-of-exploration-and-development.pdf",
+      "topics": ["inventory", "gold", "copper", "iron", "glass sand", "phosphate"],
+      "source_tier": "government_primary"
+    },
+    {
+      "id": "worldbank-uganda-macro-2025",
+      "year": 2025,
+      "type": "report",
+      "authors": "World Bank",
+      "title": "Uganda Economic Update (gold exports, commodity receipts, Wagagai mine note)",
+      "url": "https://documents1.worldbank.org/curated/en/099122425020018754/pdf/P507414-38a9e437-1c78-49ee-89ad-0e39a41970e2.pdf",
+      "topics": ["gold exports", "macroeconomics", "mining"],
+      "source_tier": "multilateral",
+      "notes": "Discusses gold re-exports vs domestic production; FY25 export surge."
+    },
+    {
+      "id": "mfp-uganda-fy2324",
+      "year": 2024,
+      "type": "government_report",
+      "authors": "Ministry of Finance, Planning and Economic Development, Uganda",
+      "title": "Budget Framework Paper FY 2023/24 — gold export receipts",
+      "url": "https://mepd.finance.go.ug/documents/MFP/MFP-FY202324.pdf",
+      "topics": ["gold exports", "trade"],
+      "source_tier": "government_primary",
+      "notes": "Reports US$3,092.12M gold exports FY2023/24; net exports US$478.29M after raw gold imports."
+    }
+  ]
+}

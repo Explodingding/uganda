@@ -196,5 +196,67 @@
     "title": "International trade statistics (HS 7010–7019 glass products)",
     "url": "https://comtradeplus.un.org/",
     "notes": "Use for import substitution analysis once product codes and years are selected."
+  },
+  {
+    "id": "mfp-uganda-fy2324",
+    "type": "government_report",
+    "authors": "Ministry of Finance, Planning and Economic Development, Uganda",
+    "year": 2024,
+    "title": "Macroeconomic and Fiscal Performance — Budget Framework Paper FY 2023/24",
+    "url": "https://mepd.finance.go.ug/documents/MFP/MFP-FY202324.pdf",
+    "notes": "Gold export receipts US$3,092.12M FY2023/24; net gold exports US$478.29M."
+  },
+  {
+    "id": "worldbank-uganda-macro-2025",
+    "type": "report",
+    "authors": "World Bank",
+    "year": 2025,
+    "title": "Uganda Economic Update (commodity exports, gold, Wagagai mine)",
+    "url": "https://documents1.worldbank.org/curated/en/099122425020018754/pdf/P507414-38a9e437-1c78-49ee-89ad-0e39a41970e2.pdf",
+    "notes": "Discusses gold export growth and re-export dynamics; FY25 figures."
+  },
+  {
+    "id": "ucem-2024-statement",
+    "type": "industry_association",
+    "authors": "Uganda Chamber of Energy and Minerals (UCEM)",
+    "title": "General media statement — mineral portfolio and sector GDP",
+    "url": "https://ucem.ug/general-media-statement/",
+    "notes": "ASM ~US$850M production value; mining GDP 2.2% FY2022/23; mineral list including glass sand, REE."
+  },
+  {
+    "id": "springer-albertine-oil-2025",
+    "type": "journal_article",
+    "authors": "Abraham, M.R.; Mnason, T.; Emmanuel, K.",
+    "year": 2025,
+    "title": "Soil and water contamination from oil exploration in the Albertine Graben, Western Uganda",
+    "url": "https://doi.org/10.1007/s12665-025-12451-6",
+    "notes": "Peer-reviewed; Buliisa/Kikuube study sites."
+  },
+  {
+    "id": "mak-gold-nyakishenyi-2026",
+    "type": "thesis",
+    "authors": "Makerere University (MakIR)",
+    "year": 2026,
+    "title": "Genesis and distribution of gold deposits in Nyakishenyi, Buhweju District",
+    "url": "https://makir.mak.ac.ug/items/53f0f373-20e5-49c0-b298-1781bba3d824",
+    "notes": "2026 thesis on orogenic gold."
+  },
+  {
+    "id": "mdpi-vermiculite-2022",
+    "type": "journal_article",
+    "authors": "Marcos, C.",
+    "year": 2022,
+    "title": "Effect of Water Immersion on Raw and Expanded Ugandan Vermiculite",
+    "url": "https://doi.org/10.3390/min12010023",
+    "notes": "Ugandan vermiculite properties; background for industrial mineral tier."
+  },
+  {
+    "id": "odongo-nalwenkomba-2024",
+    "type": "journal_article",
+    "authors": "Odongo, I.",
+    "year": 2024,
+    "title": "Land use changes and sand mining — Nalwenkomba Wetland Catchment, Kamuli",
+    "url": "https://scholar.google.com/scholar?q=Odongo+2024+Nalwenkomba+sand+mining",
+    "notes": "Verify journal issue before formal citation."
   }
 ]
