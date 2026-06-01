@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import factChecks from '../data/fact-checks.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+const purityCheck = factChecks.find((f) => f.topic.includes('glass sand'));
+---
+
+<BaseLayout
+  title="Uganda analysis"
+  description="Lake Victoria silica, development minerals, ecosystems, and import substitution — cited to DGSM and DELVE."
+  current="uganda"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Emerging frontier</p>
+    <h1>Uganda: silica wealth and lacustrine constraints</h1>
+    <p>
+      High-purity quartz sands occur along Lake Victoria (e.g. Bukakata, Diimu, Lwera, Kome Islands,
+      Nalumuli and Nyimu bays). National surveys document very high SiO₂ at specific sites; industrial
+      glass projects have been proposed but remain largely unrealized — creating both opportunity and
+      a need for rigorous environmental planning.
+    </p>
+  </section>
+
+  <div class="table-wrap">
+    <table>
+      <caption>Strategic comparison (framework report, verified where noted)</caption>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Lommel, Belgium</th>
+          <th>Uganda</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Deposit purity</td>
+          <td>Ultra-high silica (&gt;99.5% SiO₂ cited for zilverzand)</td>
+          <td>Site-specific; DGSM reports up to ~99.95% SiO₂ (Kome) and ~99.93% delineated (Diimu/Bukakata) — assay per site</td>
+        </tr>
+        <tr>
+          <td>Economic structure</td>
+          <td>Integrated extraction → processing → manufacturing</td>
+          <td>Mix of artisanal extraction and glass imports; value-addition policy goal</td>
+        </tr>
+        <tr>
+          <td>Environmental legacy</td>
+          <td>Reclaimed post-mining landscapes (e.g. Lommelse Sahara)</td>
+          <td>Shore mining risks to Lake Victoria wetlands, fisheries, erosion</td>
+        </tr>
+        <tr>
+          <td>Renewable synergies</td>
+          <td>Large ground PV + Sibelco floating PV precedent in Flanders</td>
+          <td>High solar irradiance; FPV only where hydrology and ecology permit</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <article class="card">
+    <h2>Official mineral inventory</h2>
+    <p>
+      The Directorate of Geological Survey and Mines (DGSM) lists glass sand among viable investment
+      targets and names localities including Diimu, Bukakata, and Kome.
+    </p>
+    <p>
+      <a href={bibById['dgsm-2024-mineral-potential']?.url}>DGSM — Mineral Potential of Uganda (2024 PDF)</a>
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>Development minerals context</h2>
+    <p>
+      Beyond silica, Uganda’s <em>development minerals</em> sector (sand, stone, clay, limestone, salt,
+      kaolin, gypsum) employs large informal workforces. Balanced planning means coupling economic
+      formalization with concurrent reclamation — not only pursuing glass-grade silica.
+    </p>
+    <p>
+      <a href={bibById['delve-2018-baseline-vol1']?.url}>DELVE baseline assessment (2018)</a>
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>Concurrent reclamation on Lake Victoria</h2>
+    <p>
+      Framework recommendation: tie concessions to legally enforceable concurrent reclamation —
+      bank stabilization, native wetland vegetation (e.g. papyrus zones), or post-pit uses such as
+      regulated aquaculture or eco-tourism where ecologically appropriate.
+    </p>
+  </article>
+
+  {purityCheck && (
+    <div class="notice">
+      <strong>Fact-check:</strong> {purityCheck.finding}
+    </div>
+  )}
+</BaseLayout>

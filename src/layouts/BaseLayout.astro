@@ -1,0 +1,63 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: string;
+}
+
+const { title, description = 'Evidence-based research portal: Lommel (Belgium) lessons for balanced resource development in Uganda.', current } = Astro.props;
+const fullTitle = `${title} | Uganda Sustainable Resources`;
+
+const nav = [
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '/lommel', label: 'Lommel case', id: 'lommel' },
+  { href: '/uganda', label: 'Uganda analysis', id: 'uganda' },
+  { href: '/catalog', label: 'Resource catalog', id: 'catalog' },
+  { href: '/roadmap', label: 'Policy roadmap', id: 'roadmap' },
+  { href: '/bibliography', label: 'Bibliography', id: 'bibliography' },
+  { href: '/methodology', label: 'Methodology', id: 'methodology' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="/">Uganda · Sustainable Resources</a>
+        <nav class="nav" aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={current === item.id ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>
+        Research support portal — facts cited to primary sources. Working repository:
+        <a href="https://github.com/Explodingding/uganda" rel="noopener noreferrer">github.com/Explodingding/uganda</a>
+      </p>
+    </footer>
+  </body>
+</html>

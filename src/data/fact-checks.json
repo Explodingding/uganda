@@ -1,0 +1,23 @@
+[
+  {
+    "topic": "Kristal Solar Park vs. floating PV",
+    "claim_in_report": "Kristal Solar Park is presented as floating solar on post-mining quarry lakes.",
+    "verified_status": "needs_correction",
+    "finding": "Kristal Solar Park (99.5 MW, operational 2019) is a ground-mounted installation on the Kristalpark III industrial estate in Lommel, supplying green power to nearby industry including Nyrstar. A documented floating PV precedent in the same Sibelco sand-extraction context is the 7 MWp Floating PV project on the De Schans quarry lake at Mol/Dessel.",
+    "sources": ["lommel-kristal-solar", "sibelco-floating-pv"]
+  },
+  {
+    "topic": "Uganda glass sand purity",
+    "claim_in_report": "Lake Victoria deposits match or approach Lommel-grade purity (>99.5% SiO₂).",
+    "verified_status": "partially_supported",
+    "finding": "DGSM and historical BGS/NORA reports document very high SiO₂ at specific sites (e.g. up to ~99.95% at Kome; ~99.93% delineated at Diimu/Bukakata). Deposit heterogeneity, grain size, and processing requirements mean site-specific assays are required before equating to Lommel zilverzand specifications.",
+    "sources": ["dgsm-2024-mineral-potential", "nerc-wc92078"]
+  },
+  {
+    "topic": "Reclamation bonds in Uganda",
+    "claim_in_report": "Mining and Minerals Act should enforce reclamation bonds.",
+    "verified_status": "supported",
+    "finding": "The Mining and Minerals Act, 2022 requires mine closure plans, progressive rehabilitation, and financial assurance (bonds/guarantees). Amendment discussions (2026) may strengthen bonding — cite the enacted Act for current law.",
+    "sources": ["uganda-mining-act-2022"]
+  }
+]

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import factChecks from '../data/fact-checks.json';
+---
+
+<BaseLayout
+  title="Methodology"
+  description="How this portal maintains factual accuracy and deploys from GitHub via Netlify."
+  current="methodology"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Research integrity</p>
+    <h1>Methodology &amp; deployment</h1>
+  </section>
+
+  <article class="card">
+    <h2>Evidence standards</h2>
+    <ol>
+      <li><strong>Tier 1:</strong> Government surveys (DGSM), legislation, parliamentary acts, peer-reviewed journals.</li>
+      <li><strong>Tier 2:</strong> Multilateral reports (IRENA, UNEP), BGS/NORA technical assessments.</li>
+      <li><strong>Tier 3:</strong> Municipal and corporate project pages — use for named installations; cross-check capacity figures.</li>
+      <li><strong>Not used:</strong> Undated AI summaries, unattributed blogs, or portal text without a <code>source_id</code>.</li>
+    </ol>
+  </article>
+
+  <article class="card">
+    <h2>Fact-check register</h2>
+    <p>Known corrections between the framework PDF and verified sources:</p>
+    <ul>
+      {factChecks.map((fc) => (
+        <li>
+          <strong>{fc.topic}</strong> — <em>{fc.verified_status}</em>: {fc.finding}
+        </li>
+      ))}
+    </ul>
+    <p>Edit <code>src/data/fact-checks.json</code> when new literature resolves an open question.</p>
+  </article>
+
+  <article class="card">
+    <h2>GitHub → Netlify workflow</h2>
+    <ol>
+      <li>Push this repository to <a href="https://github.com/Explodingding/uganda">github.com/Explodingding/uganda</a>.</li>
+      <li>In Netlify: <strong>Add new site</strong> → Import from Git → select the repo.</li>
+      <li>Build command: <code>npm run build</code> · Publish directory: <code>dist</code> (set in <code>netlify.toml</code>).</li>
+      <li>Node version: 22 (from <code>.nvmrc</code> / <code>netlify.toml</code>).</li>
+      <li>Each push to <code>main</code> triggers a production deploy; use pull requests for review.</li>
+    </ol>
+  </article>
+
+  <article class="card">
+    <h2>Adding research data</h2>
+    <ul>
+      <li><code>src/data/resources.json</code> — resource catalog entries</li>
+      <li><code>src/data/bibliography.json</code> — new references (add before citing)</li>
+      <li><code>public/documents/</code> — PDFs and downloadable annexes</li>
+      <li>Optional: add <code>content/research/*.md</code> later for long-form chapters</li>
+    </ul>
+  </article>
+</BaseLayout>

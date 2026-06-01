@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "Uganda natural resources catalog",
+    "description": "Structured catalog for research expansion. Each entry must cite a source_id from bibliography.json before publication.",
+    "last_updated": "2026-06-01",
+    "data_policy": "Only add quantitative claims when backed by a bibliography id or peer-reviewed DOI."
+  },
+  "categories": [
+    {
+      "id": "industrial_minerals",
+      "name": "Industrial & development minerals",
+      "description": "Materials supporting construction, manufacturing, and local value chains — priority for balanced, non-export-only development."
+    },
+    {
+      "id": "energy_transition",
+      "name": "Energy transition synergies",
+      "description": "Renewable energy co-location with extractives and industry (ground PV, floating PV, geothermal where documented)."
+    },
+    {
+      "id": "metallic",
+      "name": "Metallic minerals",
+      "description": "Documented in national inventories; include only with DGSM or formal feasibility references."
+    }
+  ],
+  "resources": [
+    {
+      "id": "glass-sand-lake-victoria",
+      "name": "High-purity silica (glass) sand — Lake Victoria littoral",
+      "category": "industrial_minerals",
+      "regions": ["Masaka", "Rakai", "Mukono", "Buvuma"],
+      "localities": ["Bukakata", "Diimu (Dimu)", "Lwera", "Nalumuli Bay", "Nyimu Bay", "Kome Islands"],
+      "status": "documented_reserves_exploration",
+      "development_model": "lommel_parallel",
+      "summary": "Quartz-rich beach sands along Lake Victoria; historically used for domestic glass (e.g. East African Glass Works, Bukakata, 1960s). DGSM lists viable glass-sand investment targets with reported high SiO₂ at specific sites.",
+      "policy_hooks": ["value_addition", "reclamation_bonds", "lacustrine_ecosystem_protection"],
+      "source_ids": ["dgsm-2024-mineral-potential", "nerc-wc92078", "delve-2018-baseline-vol1"]
+    },
+    {
+      "id": "dimension-stone",
+      "name": "Dimension stone (granite, marble, slate)",
+      "category": "industrial_minerals",
+      "regions": ["Central", "Eastern", "Southwest"],
+      "localities": [],
+      "status": "active_artisanal_and_small_scale",
+      "development_model": "cluster_zoning",
+      "summary": "Significant development-mineral sector per DELVE baseline; potential for regulated quarrying with concurrent reclamation rather than unplanned pits.",
+      "policy_hooks": ["industrial_parks", "occupational_health"],
+      "source_ids": ["delve-2018-baseline-vol1", "dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "limestone",
+      "name": "Limestone",
+      "category": "industrial_minerals",
+      "regions": ["Eastern", "Northern"],
+      "localities": [],
+      "status": "documented_occurrences",
+      "development_model": "cement_clinker_localization",
+      "summary": "Feedstock for cement and lime; coupling with domestic construction demand reduces import pressure.",
+      "policy_hooks": ["value_addition", "air_quality_monitoring"],
+      "source_ids": ["delve-2018-baseline-vol1", "dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "kaolin",
+      "name": "Kaolin / ball clay",
+      "category": "industrial_minerals",
+      "regions": ["Southwest", "Central"],
+      "localities": ["Mutaka", "Namasera Hill (historical trials)"],
+      "status": "documented_occurrences",
+      "development_model": "ceramics_cluster",
+      "summary": "Ceramics and industrial mineral feedstocks; BGS report references Mutaka and related clay resources alongside Diimu silica.",
+      "policy_hooks": ["value_addition"],
+      "source_ids": ["nerc-wc92078", "delve-2018-baseline-vol1"]
+    },
+    {
+      "id": "salt",
+      "name": "Salt (brine / lake evaporation)",
+      "category": "industrial_minerals",
+      "regions": ["Western"],
+      "localities": ["Lake Katwe"],
+      "status": "artisanal_production",
+      "development_model": "formalization_and_safety",
+      "summary": "Development mineral with established artisanal mining; requires social and environmental safeguards distinct from silica case study.",
+      "policy_hooks": ["artisanal_formalization", "wetland_protection"],
+      "source_ids": ["delve-2018-baseline-vol1"]
+    },
+    {
+      "id": "gypsum",
+      "name": "Gypsum",
+      "category": "industrial_minerals",
+      "regions": [],
+      "localities": [],
+      "status": "catalogued_baseline",
+      "development_model": "building_materials_hub",
+      "summary": "Listed in DELVE development-minerals baseline; expand with district-level DGSM maps before quantitative claims.",
+      "policy_hooks": ["value_addition"],
+      "source_ids": ["delve-2018-baseline-vol1"]
+    },
+    {
+      "id": "geothermal",
+      "name": "Geothermal energy (mineral-energy nexus)",
+      "category": "energy_transition",
+      "regions": ["Western Rift"],
+      "localities": [],
+      "status": "regulated_under_2022_act",
+      "development_model": "dual_land_use_planning",
+      "summary": "The Mining and Minerals Act, 2022 also covers geothermal resource regulation — relevant for industrial heat and power distinct from FPV on sand pits.",
+      "policy_hooks": ["energy_industrial_co_location"],
+      "source_ids": ["uganda-mining-act-2022", "dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "fpv-post-mining",
+      "name": "Floating photovoltaics on controlled water bodies",
+      "category": "energy_transition",
+      "regions": ["Post-mining lakes (prospective)"],
+      "localities": [],
+      "status": "policy_option_not_installed",
+      "development_model": "lommel_region_fpv_precedent",
+      "summary": "Belgian precedent: Sibelco Floating PV (7 MWp) on quarry water. Uganda equatorial heat may benefit from water-cooling; requires hydrological and ecological impact assessment on Lake Victoria vs. closed pits.",
+      "policy_hooks": ["arable_land_preservation", "industrial_feeder_power"],
+      "source_ids": ["sibelco-floating-pv", "irena-fpv-2020"]
+    }
+  ]
+}

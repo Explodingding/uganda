@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import catalog from '../data/resources.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+const categories = catalog.categories;
+---
+
+<BaseLayout
+  title="Resource catalog"
+  description="Editable catalog of Uganda natural resources for evidence-based research expansion."
+  current="catalog"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Data layer · GitHub-editable</p>
+    <h1>{catalog.meta.title}</h1>
+    <p>{catalog.meta.description}</p>
+    <p><em>Policy:</em> {catalog.meta.data_policy}</p>
+    <p>Source file: <code>src/data/resources.json</code> — commit changes to trigger Netlify rebuild.</p>
+  </section>
+
+  {categories.map((cat) => {
+    const items = catalog.resources.filter((r) => r.category === cat.id);
+    return (
+      <section>
+        <h2>{cat.name}</h2>
+        <p>{cat.description}</p>
+        <div class="grid-2">
+          {items.map((res) => (
+            <article class="card" id={res.id}>
+              <h3>{res.name}</h3>
+              <p>
+                <span class="tag">{res.status.replace(/_/g, ' ')}</span>
+                <span class="tag">{res.development_model.replace(/_/g, ' ')}</span>
+              </p>
+              <p>{res.summary}</p>
+              {res.localities.length > 0 && (
+                <p><strong>Localities:</strong> {res.localities.join(', ')}</p>
+              )}
+              {res.regions.length > 0 && (
+                <p><strong>Regions:</strong> {res.regions.join(', ')}</p>
+              )}
+              <p><strong>Sources:</strong></p>
+              <ul>
+                {res.source_ids.map((sid) => {
+                  const ref = bibById[sid];
+                  return (
+                    <li>
+                      {ref ? (
+                        <a href={ref.url}>{ref.title}</a>
+                      ) : (
+                        <span class="cite-id">{sid} (missing bibliography entry)</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</BaseLayout>

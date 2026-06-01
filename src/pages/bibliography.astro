@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import bibliography from '../data/bibliography.json';
+---
+
+<BaseLayout
+  title="Bibliography"
+  description="Curated primary sources for Uganda resource research and Lommel comparative case."
+  current="bibliography"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Sources only — no unsourced claims</p>
+    <h1>Bibliography</h1>
+    <p>
+      Use these references in Zotero, Mendeley, or BibTeX exports. When adding portal content, cite
+      <code>source_ids</code> in <code>src/data/resources.json</code> or add new entries here first.
+    </p>
+  </section>
+
+  <ul class="cite-list">
+    {bibliography.map((ref) => (
+      <li>
+        <span class="cite-id">{ref.id}</span>
+        <p>
+          <strong>
+            {ref.authors}
+            {ref.year ? ` (${ref.year})` : ''}.
+          </strong>
+          <em>{ref.title}</em>
+          {ref.publisher ? `. ${ref.publisher}` : ''}.
+        </p>
+        {ref.url && (
+          <p>
+            <a href={ref.url} rel="noopener noreferrer">{ref.url}</a>
+          </p>
+        )}
+        {ref.notes && <p>{ref.notes}</p>}
+      </li>
+    ))}
+  </ul>
+
+  <div class="notice">
+    <strong>For your friend’s doctorate:</strong> Extend this list with peer-reviewed papers (DOI required),
+    EIA reports for specific Ugandan projects, and parliamentary committee reports. Avoid news blogs as
+    sole evidence for quantitative geology claims.
+  </div>
+</BaseLayout>

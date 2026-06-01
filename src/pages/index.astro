@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home" current="home">
+  <section class="hero">
+    <p class="hero__eyebrow">Comparative environmental &amp; industrial strategy</p>
+    <h1>Balanced development where resources are not yet fully commercialized</h1>
+    <p>
+      This portal structures deep research comparing <strong>Lommel, Belgium</strong> — a century of
+      high-purity silica extraction, industrial clustering, ecological reclamation, and renewable
+      energy co-location — with <strong>Uganda’s</strong> documented mineral endowment, especially
+      Lake Victoria glass sands and broader development minerals.
+    </p>
+    <p>
+      Content is designed for academic work (including doctoral research): every page links to a
+      curated bibliography; quantitative claims require a cited source. The framework report is
+      available as PDF and is broken into navigable sections on this site.
+    </p>
+    <p>
+      <a href="/documents/Lommel_Uganda_Sustainable_Resource_Management_Report.pdf">Download framework PDF</a>
+    </p>
+  </section>
+
+  <div class="grid-2">
+    <a class="card card--link" href="/lommel">
+      <h2>Lommel case study</h2>
+      <p>Zilverzand, Sibelco, Lommelse Sahara restoration, Kristal Solar Park, and Floating PV at Mol/Dessel — with fact-check notes.</p>
+    </a>
+    <a class="card card--link" href="/uganda">
+      <h2>Uganda analysis</h2>
+      <p>Silica deposits, import dependency, lacustrine risks, and parallels to the “Lommel model” of local value addition.</p>
+    </a>
+    <a class="card card--link" href="/catalog">
+      <h2>Resource catalog</h2>
+      <p>Editable JSON catalog: silica, limestone, kaolin, salt, dimension stone, geothermal, and more — expand via GitHub.</p>
+    </a>
+    <a class="card card--link" href="/roadmap">
+      <h2>Policy roadmap</h2>
+      <p>Reclamation bonds, green industrial clusters, and circular glass — three pillars from the framework report.</p>
+    </a>
+    <a class="card card--link" href="/bibliography">
+      <h2>Bibliography</h2>
+      <p>DGSM, DELVE, BGS/NORA, Ugandan legislation, Lommel municipal sources, IRENA, and Sibelco FPV.</p>
+    </a>
+    <a class="card card--link" href="/methodology">
+      <h2>Methodology</h2>
+      <p>How we avoid unsourced claims; how to add data through the repository for Netlify deploys.</p>
+    </a>
+  </div>
+
+  <div class="notice">
+    <strong>Repository status:</strong> GitHub repo
+    <a href="https://github.com/Explodingding/uganda">Explodingding/uganda</a> is ready for your first push.
+    Connect it to Netlify for automatic builds on each commit (see README).
+  </div>
+</BaseLayout>

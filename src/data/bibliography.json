@@ -1,0 +1,91 @@
+[
+  {
+    "id": "dgsm-2024-mineral-potential",
+    "type": "government_report",
+    "authors": "Directorate of Geological Survey and Mines (DGSM), Republic of Uganda",
+    "year": 2024,
+    "title": "Mineral Potential of Uganda: Status of Exploration and Development",
+    "publisher": "Ministry of Energy and Mineral Development",
+    "url": "https://dgsm.go.ug/wp-content/uploads/2024/09/Mineral-Potential-of-Uganda_Status-of-exploration-and-development.pdf",
+    "notes": "Primary official inventory for glass sand localities (Diimu, Bukakata, Kome, etc.) and broader mineral portfolio."
+  },
+  {
+    "id": "delve-2018-baseline-vol1",
+    "type": "report",
+    "authors": "Hinton, J., et al.",
+    "year": 2018,
+    "title": "Baseline Assessment of Development Minerals in Uganda, Volume 1",
+    "publisher": "DELVE / Levin Sources (commissioned work)",
+    "url": "https://www.delvedatabase.org/uploads/resources/Baseline-Assessment-of-Development-Minerals-in-Uganda-Volume-1.pdf",
+    "notes": "Development minerals value chains: sand, clay, limestone, dimension stone, kaolin, gypsum, salt."
+  },
+  {
+    "id": "nerc-wc92078",
+    "type": "technical_report",
+    "authors": "British Geological Survey / NERC",
+    "year": 1992,
+    "title": "Industrial Mineral Assessment of Uganda (WC/92/078)",
+    "url": "https://nora.nerc.ac.uk/id/eprint/20654/1/WC92078.pdf",
+    "notes": "Historical analytical data for Diimu (Dimu) beach silica sand (e.g. ~99.7% SiO₂ in sampled material)."
+  },
+  {
+    "id": "uganda-mining-act-2022",
+    "type": "legislation",
+    "authors": "Parliament of Uganda",
+    "year": 2022,
+    "title": "The Mining and Minerals Act, 2022",
+    "url": "https://bills.parliament.ug/attachments/The%20Mining%20and%20Minerals%20Act,%202022%20(Returned%20by%20H.E%20the%20President).pdf",
+    "notes": "Mine closure planning, progressive rehabilitation, and financial assurance for environmental restoration."
+  },
+  {
+    "id": "lommel-kristal-solar",
+    "type": "municipal_source",
+    "authors": "Stad Lommel",
+    "year": 2019,
+    "title": "Kristal Solar Park",
+    "url": "https://www.lommel.be/kristal-solar-park",
+    "notes": "99.5 MW ground-mounted PV on Kristalpark III industrial zone; co-location with industry (e.g. Nyrstar)."
+  },
+  {
+    "id": "sibelco-floating-pv",
+    "type": "project_website",
+    "authors": "Sibelco / LRM (Floating PV project)",
+    "year": null,
+    "title": "Floating PV — Sibelco De Schans sand quarry (Mol/Dessel)",
+    "url": "https://www.floatingpv.be/en/",
+    "notes": "7 MWp floating solar on a Sibelco quarry lake in Flanders; relevant FPV + extractives precedent (not Kristal Solar Park)."
+  },
+  {
+    "id": "lommelse-sahara-natuurpunt",
+    "type": "ngo_source",
+    "authors": "Natuurpunt",
+    "title": "Lommelse Sahara nature reserve",
+    "url": "https://www.natuurpunt.be/natuurgebied/lommelse-sahara",
+    "notes": "Post-industrial heathland and pine restoration on former mining landscapes near Lommel."
+  },
+  {
+    "id": "sibelco-lommel-history",
+    "type": "corporate_source",
+    "authors": "Sibelco",
+    "title": "Sibelco operations and industrial minerals (company publications)",
+    "url": "https://www.sibelco.com/",
+    "notes": "Corporate history of quartz sand extraction in the Campine region; use for operational context with independent verification."
+  },
+  {
+    "id": "unep-development-minerals",
+    "type": "guideline",
+    "authors": "UN Environment Programme",
+    "title": "Development Minerals — sector guidance",
+    "url": "https://www.unep.org/explore-topics/extractives/what-we-do/development-minerals",
+    "notes": "Framework for low-intensity minerals (sand, stone, clay) in emerging economies."
+  },
+  {
+    "id": "irena-fpv-2020",
+    "type": "report",
+    "authors": "IRENA",
+    "year": 2020,
+    "title": "Innovation Outlook: Floating Solar",
+    "url": "https://www.irena.org/publications/2019/Oct/Innovation-outlook-floating-solar",
+    "notes": "Thermodynamic cooling and land-use benefits of floating PV — use for equations and global context."
+  }
+]

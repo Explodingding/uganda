@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import factChecks from '../data/fact-checks.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+const fpvCheck = factChecks.find((f) => f.topic.includes('Kristal'));
+---
+
+<BaseLayout
+  title="Lommel case study"
+  description="Belgium silica hub, ecological reclamation, and renewable energy co-location — with verified corrections."
+  current="lommel"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Established model · Flanders, Belgium</p>
+    <h1>Lommel and the Campine silica industry</h1>
+    <p>
+      Since the 19th century, Lommel has exploited exceptionally pure quartz sand (<em>zilverzand</em>),
+      historically linked to firms such as Sibelco. High chemical purity (reported SiO₂ &gt; 99.5%,
+      very low iron) supports Europe’s glass and advanced manufacturing supply chains through
+      regional processing rather than raw export alone.
+    </p>
+  </section>
+
+  <article class="card">
+    <h2>Industrial clustering</h2>
+    <p>
+      The region retained value by coupling extraction with glass and chemical industries — a pattern
+      Uganda’s policy discourse often references when discussing domestic sheet glass and packaging.
+    </p>
+    <p>
+      <span class="tag">Corporate context</span>
+      <a href={bibById['sibelco-lommel-history']?.url}>Sibelco</a> (verify operational details against independent planning documents).
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>From degradation to the Lommelse Sahara</h2>
+    <p>
+      Early open-pit mining and related industry altered pine forests and hydrology. Planned
+      post-mining restoration — conifer belts, flooded pits, heathland species — created the
+      <strong>Lommelse Sahara</strong> nature area, now managed as a biodiversity asset.
+    </p>
+    <p>
+      <a href={bibById['lommelse-sahara-natuurpunt']?.url}>Natuurpunt — Lommelse Sahara</a>
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>Renewable energy: two distinct precedents</h2>
+    <h3>Kristal Solar Park (ground-mounted)</h3>
+    <p>
+      <strong>99.5 MW</strong> photovoltaic plant on Kristalpark III, Lommel (~93 ha). Operational from 2019;
+      supplies industry including Nyrstar under PPA arrangements. This is <em>not</em> a floating installation.
+    </p>
+    <p><a href={bibById['lommel-kristal-solar']?.url}>Stad Lommel — Kristal Solar Park</a></p>
+
+    <h3>Floating PV on a Sibelco quarry lake (Mol/Dessel)</h3>
+    <p>
+      The <strong>Floating PV</strong> project (~7 MWp) on the De Schans sand quarry (Sibelco) demonstrates
+      water-cooled PV, on-site industrial consumption, and land sparing — closer to the framework report’s
+      “quarry lake” narrative than Kristal Solar Park.
+    </p>
+    <p><a href={bibById['sibelco-floating-pv']?.url}>floatingpv.be</a> · <a href={bibById['irena-fpv-2020']?.url}>IRENA floating solar outlook</a></p>
+  </article>
+
+  {fpvCheck && (
+    <div class="notice">
+      <strong>Fact-check ({fpvCheck.verified_status.replace('_', ' ')}):</strong>
+      {fpvCheck.finding}
+    </div>
+  )}
+</BaseLayout>

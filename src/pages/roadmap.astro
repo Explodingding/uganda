@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+---
+
+<BaseLayout
+  title="Policy roadmap"
+  description="Three pillars for Uganda: reclamation bonds, green industrial clusters, circular glass."
+  current="roadmap"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">From analysis to policy</p>
+    <h1>Strategic roadmap for balanced industrial development</h1>
+    <p>
+      Derived from the Lommel–Uganda framework report and aligned with Uganda’s
+      <a href={bibById['uganda-mining-act-2022']?.url}>Mining and Minerals Act, 2022</a>
+      where applicable. Each pillar should be developed in doctoral work with district-level
+      environmental baselines and stakeholder consultation — not as generic advocacy.
+    </p>
+  </section>
+
+  <article class="card">
+    <h2>I. Progressive mining reclamation bonds</h2>
+    <p>
+      Require financial assurance (bonds or guarantees) in escrow before industrial sand extraction;
+      release funds only when post-extraction sites meet agreed ecological indicators. The 2022 Act
+      already contemplates closure plans, progressive rehabilitation, and financial assurance.
+    </p>
+    <p>
+      <strong>Research angles:</strong> bond sizing methods, independent verification, insolvency scenarios,
+      comparison with EU quarry rehabilitation funds.
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>II. Localized green industrial clusters</h2>
+    <p>
+      Zone processing near infrastructure corridors (e.g. Kampala–Entebbe, Jinja) with clean power
+      feed-in. Policy tools may include selective export charges on raw sand to incentivize domestic
+      container glass, architectural glass, and solar-component manufacturing where feedstock quality
+      is proven.
+    </p>
+    <p>
+      <strong>Research angles:</strong> transport economics, energy tariffs, industrial symbiosis with
+      Kristalpark-style co-location (ground PV first; FPV only after water-body classification).
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>III. Circular glass ecosystems</h2>
+    <p>
+      Formalize collection and cullet recycling to reduce melting energy — documented extensively in
+      EU glass sectors. Uganda-specific collection logistics, urban employment, and contamination
+      standards need primary studies.
+    </p>
+    <p>
+      <strong>Research angles:</strong> life-cycle assessment, informal sector integration, import
+      substitution metrics tied to DGSM production data.
+    </p>
+  </article>
+
+  <article class="card">
+    <h2>Floating PV equation (thermodynamics)</h2>
+    <p>
+      The framework report cites the temperature coefficient for module power:
+      <code>P<sub>max</sub>(T) = P<sub>max</sub>(25°C) × [1 + γ × (T<sub>cell</sub> − 25)]</code>
+      with γ typically −0.35% to −0.45% /°C for crystalline silicon. Water-cooled floating arrays can
+      lower cell temperature versus equatorial land installs — but Lake Victoria applications demand
+      fisheries, water quality, and navigation impact studies distinct from closed quarry lakes in Belgium.
+    </p>
+    <p><a href={bibById['irena-fpv-2020']?.url}>IRENA — Innovation Outlook: Floating Solar</a></p>
+  </article>
+</BaseLayout>
