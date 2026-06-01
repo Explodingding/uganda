@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import caseFile from '../../data/case-studies/diimu.json';
+import bibliography from '../../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+---
+
+<BaseLayout
+  title="Case: Diimu glass project"
+  description="Documented timeline of Diimu sheet glass proposals and geological context."
+  current="cases"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Case file</p>
+    <h1>{caseFile.title}</h1>
+    <p>{caseFile.disclaimer}</p>
+  </section>
+
+  <article class="card">
+    <h2>Timeline (cited events only)</h2>
+    <ol class="timeline">
+      {caseFile.events.map((e) => (
+        <li>
+          <strong>{e.year}</strong> — {e.event}
+          <ul class="source-list">
+            {e.source_ids.map((sid) => {
+              const ref = bibById[sid];
+              return (
+                <li>
+                  {ref ? <a href={ref.url}>{sid}</a> : sid}
+                </li>
+              );
+            })}
+          </ul>
+        </li>
+      ))}
+    </ol>
+  </article>
+
+  <article class="card">
+    <h2>Open research questions</h2>
+    <ul>
+      {caseFile.open_questions.map((q) => (
+        <li>{q}</li>
+      ))}
+    </ul>
+  </article>
+
+  <article class="card">
+    <h2>Related localities</h2>
+    <p>{caseFile.related_localities.join(' · ')}</p>
+    <p><a href="/catalog">Resource catalog</a> · <a href="/compare">Comparative matrix</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .timeline li {
+    margin-bottom: 1rem;
+  }
+  .source-list {
+    font-size: 0.85rem;
+    margin: 0.35rem 0 0;
+  }
+</style>

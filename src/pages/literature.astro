@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import notes from '../data/literature-notes.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+---
+
+<BaseLayout
+  title="Literature notes"
+  description="Annotated bibliography for thesis chapters — findings, limits, and use."
+  current="literature"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Annotated review</p>
+    <h1>Literature notes</h1>
+    <p>
+      Structured reading notes tied to <code>source_id</code>. Expand this file as new papers are read;
+      do not add claims here without a matching bibliography entry.
+    </p>
+  </section>
+
+  {notes.map((note) => {
+    const ref = bibById[note.source_id];
+    return (
+      <article class="card">
+        <h2>
+          {ref ? <a href={ref.url}>{ref.title}</a> : note.source_id}
+        </h2>
+        {ref && (
+          <p>
+            <span class="tag">{ref.type.replace(/_/g, ' ')}</span>
+            {ref.authors}
+            {ref.year ? ` · ${ref.year}` : ''}
+          </p>
+        )}
+        <p>{note.summary}</p>
+        <h3>Key findings</h3>
+        <ul>
+          {note.key_findings.map((f) => (
+            <li>{f}</li>
+          ))}
+        </ul>
+        <h3>Limitations</h3>
+        <p>{note.limitations}</p>
+        <h3>Use in thesis</h3>
+        <p>{note.use_in_thesis}</p>
+      </article>
+    );
+  })}
+</BaseLayout>

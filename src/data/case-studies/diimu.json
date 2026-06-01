@@ -1,0 +1,39 @@
+{
+  "id": "diimu-sheet-glass",
+  "title": "Diimu (Masaka) sheet glass project — documented timeline",
+  "disclaimer": "Journalism entries are secondary sources; verify claims via parliamentary records and MEMD files before thesis citation.",
+  "events": [
+    {
+      "year": 1960,
+      "event": "East African Glass Works used Bukakata glass sand for domestic glass production (historical).",
+      "source_ids": ["dgsm-2024-mineral-potential"]
+    },
+    {
+      "year": 1992,
+      "event": "BGS/NORA assessment of Diimu beach sand: high SiO₂ in sample; grain size predominantly 125–500 µm.",
+      "source_ids": ["nerc-wc92078"]
+    },
+    {
+      "year": 2014,
+      "event": "Public reporting: 'Sheet Glass Project' proposed for Diimu, Masaka — sheet glass, tiles, construction materials.",
+      "source_ids": ["watchdog-diimu-2025"]
+    },
+    {
+      "year": 2016,
+      "event": "Press reporting: presidential directive to fast-track exploration with named investor (reported).",
+      "source_ids": ["watchdog-diimu-2025"]
+    },
+    {
+      "year": 2025,
+      "event": "Press reporting: project still not commissioned; local economic opportunity costs discussed.",
+      "source_ids": ["watchdog-diimu-2025"]
+    }
+  ],
+  "open_questions": [
+    "What EIA and feasibility studies were filed with NEMA/MEMD for Diimu?",
+    "What HS-coded glass imports could a plant displace (UBOS data needed)?",
+    "Does current sand mining at Diimu target glass spec or construction aggregate?"
+  ],
+  "related_localities": ["Bukakata", "Lwera", "Kome Islands"],
+  "source_ids": ["dgsm-2024-mineral-potential", "nerc-wc92078", "watchdog-diimu-2025", "mak-lwera-wetland-gis"]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Campine silica industry — historical timeline (Belgium)",
+  "source_ids": ["sibelco-history-1872", "belga-sibelco-mol"],
+  "events": [
+    { "year": 1862, "event": "First sand mining permit in Kempen (Van Eetvelde), per Sibelco corporate history." },
+    { "year": 1872, "event": "SCR (Sablières et Carrières Réunies) incorporated — foundation of Sibelco lineage." },
+    { "year": 1880, "event": "Export to UK established (corporate history)." },
+    { "year": 1882, "event": "Dredging mills introduced in Campine sand operations (Belga/Sibelco narrative)." },
+    { "year": 1888, "event": "Sand dredgers introduced (Belga narrative)." },
+    { "year": "late 19th c.", "event": "Emsens family acquires large landholdings in Lommel for silica extraction." },
+    { "year": 1955, "event": "SCR drying/grinding plant at Dessel; 'Sibelco' product branding (corporate history)." },
+    { "year": 2019, "event": "Kristal Solar Park (99.5 MW ground PV) commissioned at Kristalpark III, Lommel." },
+    { "year": "ongoing", "event": "Floating PV (~7 MWp) at Sibelco De Schans quarry, Mol/Dessel — separate site from Kristal." }
+  ]
+}

@@ -103,5 +103,98 @@
     "title": "UBOS — national statistics (trade, industry)",
     "url": "https://www.ubos.org/",
     "notes": "Required for import substitution claims (glass HS codes) — pull specific tables before citing numbers."
+  },
+  {
+    "id": "sibelco-history-1872",
+    "type": "corporate_source",
+    "authors": "Sibelco",
+    "year": 2022,
+    "title": "The date it all began — SCR founded 1872, Kempen quartz discovery",
+    "url": "https://www.sibelco.com/en/150-years/the-date-it-all-began",
+    "notes": "Canal excavation discovery, Van Eetvelde permit 1862, industrial clustering origins."
+  },
+  {
+    "id": "belga-sibelco-mol",
+    "type": "journalism",
+    "authors": "Belga News Agency",
+    "title": "How silver sand on a Flemish bank built Sibelco",
+    "url": "https://www.belganewsagency.eu/unique-visit-the-story-of-how-a-pile-of-silver-sand-on-a-flemish-bank-made-sibelco-a-global-player-in-the-sector",
+    "notes": "Secondary narrative; cross-check dates with Sibelco corporate history."
+  },
+  {
+    "id": "mak-lwera-wetland-gis",
+    "type": "thesis",
+    "authors": "Makerere University (dissertation repository)",
+    "year": null,
+    "title": "Assessing the effects of sand mining on wetland loss in Lwera wetland system (GIS/remote sensing)",
+    "url": "https://dissertations.mak.ac.ug/handle/20.500.12281/7655",
+    "notes": "Lake Victoria basin; Masaka region wetland fragmentation linked to sand mining 2010–2019."
+  },
+  {
+    "id": "mak-lwera-livelihoods",
+    "type": "thesis",
+    "authors": "Makerere University (dissertation repository)",
+    "title": "Implications of sand mining on livelihoods in Lwera wetland, Kalungu district",
+    "url": "https://dissertations.mak.ac.ug/handle/20.500.12281/14542",
+    "notes": "Socio-economic impacts of sand mining in greater Masaka."
+  },
+  {
+    "id": "mdpi-port-bell-sediments",
+    "type": "journal_article",
+    "authors": "See MDPI article metadata",
+    "year": null,
+    "title": "Heavy metal contamination of sediments — Port Bell, Lake Victoria, Uganda",
+    "url": "https://www.mdpi.com/journal/pollutants",
+    "notes": "Dredging/sand mining health-risk framing; verify full citation from journal landing page before thesis."
+  },
+  {
+    "id": "springer-lv-trace-elements",
+    "type": "journal_article",
+    "authors": "See Springer article",
+    "year": 2021,
+    "title": "Trace-element behaviour in sediments of Ugandan part of Lake Victoria",
+    "url": "https://doi.org/10.1007/s12665-021-09554-1",
+    "notes": "Catchment-wide sediment quality; mentions mining as trace-element input pathway."
+  },
+  {
+    "id": "watchdog-diimu-2025",
+    "type": "journalism",
+    "authors": "Watchdog Uganda",
+    "year": 2025,
+    "title": "Uganda's stalled glass dream: Masaka white sand (Diimu project reporting)",
+    "url": "https://www.watchdoguganda.com/business/20250925/184536/ugandas-stalled-glass-dream-billions-lost-as-masakas-white-sand-lies-untapped.html",
+    "notes": "Tier-3: use only with independent verification of project status and government records."
+  },
+  {
+    "id": "nema-lwera-restoration-press",
+    "type": "journalism",
+    "authors": "Africa Press (reporting on NEMA)",
+    "title": "NEMA and sand firms — Lwera wetland restoration agreements (reported)",
+    "url": "https://www.africa-press.net/uganda/all-news/nema-three-firms-agree-on-lwera-wetland-restoration",
+    "notes": "Wetland permit suspension context; cite NEMA primary documents when obtained."
+  },
+  {
+    "id": "nema-uganda",
+    "type": "government_agency",
+    "authors": "National Environment Management Authority (NEMA), Uganda",
+    "title": "NEMA — Environmental regulations and EIA",
+    "url": "https://www.nema.go.ug/",
+    "notes": "Primary source for wetland mining permits and restoration enforcement."
+  },
+  {
+    "id": "lvfo-fisheries",
+    "type": "intergovernmental",
+    "authors": "Lake Victoria Fisheries Organisation",
+    "title": "LVFO — fisheries management on Lake Victoria",
+    "url": "https://www.lvfo.org/",
+    "notes": "Breeding-ground and fisheries impacts must be validated with LVFO/FAO reports for lacustrine chapter."
+  },
+  {
+    "id": "un-comtrade-hs7010",
+    "type": "database",
+    "authors": "UN Comtrade",
+    "title": "International trade statistics (HS 7010–7019 glass products)",
+    "url": "https://comtradeplus.un.org/",
+    "notes": "Use for import substitution analysis once product codes and years are selected."
   }
 ]

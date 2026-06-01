@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import factChecks from '../data/fact-checks.json';
 import bibliography from '../data/bibliography.json';
+import timeline from '../data/lommel-timeline.json';
 
 const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
 const fpvCheck = factChecks.find((f) => f.topic.includes('Kristal'));
@@ -22,6 +23,26 @@ const fpvCheck = factChecks.find((f) => f.topic.includes('Kristal'));
       regional processing rather than raw export alone.
     </p>
   </section>
+
+  <article class="card">
+    <h2>Historical timeline (Campine)</h2>
+    <ol>
+      {timeline.events.map((e) => (
+        <li>
+          <strong>{e.year}</strong> — {e.event}
+        </li>
+      ))}
+    </ol>
+    <p>
+      Sources:{' '}
+      {timeline.source_ids.map((sid, i) => (
+        <>
+          {i > 0 ? ' · ' : ''}
+          <a href={bibById[sid]?.url}>{sid}</a>
+        </>
+      ))}
+    </p>
+  </article>
 
   <article class="card">
     <h2>Industrial clustering</h2>

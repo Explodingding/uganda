@@ -2,7 +2,7 @@
   "meta": {
     "title": "Uganda natural resources catalog",
     "description": "Structured catalog for research expansion. Each entry must cite a source_id from bibliography.json before publication.",
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-06-02",
     "data_policy": "Only add quantitative claims when backed by a bibliography id or peer-reviewed DOI."
   },
   "categories": [
@@ -118,6 +118,66 @@
       "summary": "Belgian precedent: Sibelco Floating PV (7 MWp) on quarry water. Uganda equatorial heat may benefit from water-cooling; requires hydrological and ecological impact assessment on Lake Victoria vs. closed pits.",
       "policy_hooks": ["arable_land_preservation", "industrial_feeder_power"],
       "source_ids": ["sibelco-floating-pv", "irena-fpv-2020"]
+    },
+    {
+      "id": "construction-sand-lwera",
+      "name": "Construction sand — Lwera wetland system",
+      "category": "industrial_minerals",
+      "regions": ["Greater Masaka", "Mpigi", "Kalungu"],
+      "localities": ["Lwera wetland (Kampala–Masaka corridor)"],
+      "status": "active_contentious",
+      "development_model": "regulated_extraction_with_restoration",
+      "summary": "Major construction-sand source with documented wetland loss (GIS thesis) and reported NEMA restoration agreements. Distinct from glass-grade Diimu sands but central to 'balanced development' and environmental governance research.",
+      "policy_hooks": ["concurrent_reclamation", "wetland_protection", "artisanal_formalization"],
+      "source_ids": ["mak-lwera-wetland-gis", "mak-lwera-livelihoods", "nema-lwera-restoration-press", "delve-2018-baseline-vol1"]
+    },
+    {
+      "id": "iron-ore-southwest",
+      "name": "Iron ore — southwest and eastern Uganda",
+      "category": "metallic",
+      "regions": ["Kabale", "Kisoro", "Kanungu", "Mbarara", "Tororo", "Moroto"],
+      "localities": ["Muko", "Butogota", "Bukusu", "Sukulu"],
+      "status": "documented_reserves_dgsm",
+      "development_model": "steel_value_chain",
+      "summary": "DGSM 2024 lists multiple iron occurrences with reported tonnages and Fe grades (e.g. Muko ~152 Mt at 60–65% Fe; Sukulu complex). Requires feasibility and environmental baseline before citing in economic models.",
+      "policy_hooks": ["value_addition", "reclamation_bonds"],
+      "source_ids": ["dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "phosphate-sukulu",
+      "name": "Phosphate — Sukulu deposit (Tororo)",
+      "category": "metallic",
+      "regions": ["Tororo"],
+      "localities": ["Sukulu", "Bukusu complex"],
+      "status": "documented_major_deposit",
+      "development_model": "fertilizer_industrial_park",
+      "summary": "DGSM describes Sukulu phosphate as strategically significant (reported indicated/inferred tonnages). Linked to niobium/tantalite and iron in same complex — integrated planning challenge.",
+      "policy_hooks": ["value_addition", "reclamation_bonds"],
+      "source_ids": ["dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "tin",
+      "name": "Tin",
+      "category": "metallic",
+      "regions": ["Southwest"],
+      "localities": ["Listed in DGSM inventory (see report tables)"],
+      "status": "documented_occurrences",
+      "development_model": "conflict_sensitive_due_diligence",
+      "summary": "Metallic mineral with industrial uses (solder, coatings). Document details and districts in DGSM 2024 tables — expand with site-specific EIA before production claims.",
+      "policy_hooks": ["value_addition"],
+      "source_ids": ["dgsm-2024-mineral-potential"]
+    },
+    {
+      "id": "gold",
+      "name": "Gold (artisanal and industrial)",
+      "category": "metallic",
+      "regions": ["Northeast", "Southwest", "multiple districts"],
+      "localities": ["See DGSM 2024 and Uganda EITI reports"],
+      "status": "active_sector",
+      "development_model": "formalization_transparency",
+      "summary": "Major ASM and industrial gold activity; EITI and 2022 Act address licensing and transparency. Not part of Lommel silica parallel but relevant to 'resource-rich, less commercialized' regional planning.",
+      "policy_hooks": ["artisanal_formalization"],
+      "source_ids": ["dgsm-2024-mineral-potential", "eiti-uganda"]
     }
   ]
 }

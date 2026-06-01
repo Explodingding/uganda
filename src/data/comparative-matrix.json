@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "Lommel (Belgium) ↔ Uganda comparison matrix",
+    "note": "Cells marked verified cite bibliography source_ids. Empty cells = research gap.",
+    "last_updated": "2026-06-01"
+  },
+  "rows": [
+    {
+      "dimension": "Primary resource",
+      "lommel": "High-purity quartz sand (zilverzand), Campine region",
+      "uganda": "Lake Victoria littoral glass sands + construction sand (Lwera, etc.)",
+      "source_ids": ["sibelco-history-1872", "dgsm-2024-mineral-potential", "delve-2018-baseline-vol1"]
+    },
+    {
+      "dimension": "Reported SiO₂ (max cited)",
+      "lommel": ">99.5% (framework report; corporate HPQ products)",
+      "uganda": "Up to 99.95% (Kome), 99.93% (Diimu/Bukakata) per DGSM 2024",
+      "source_ids": ["dgsm-2024-mineral-potential"]
+    },
+    {
+      "dimension": "Grain-size constraint",
+      "lommel": "Processed products tailored to glass/ceramics markets",
+      "uganda": "BGS sample coarse (125–500 µm); historical note: may need washing/sizing",
+      "source_ids": ["nerc-wc92078"]
+    },
+    {
+      "dimension": "Value-chain stage",
+      "lommel": "Integrated extraction → processing → glass/advanced manufacturing clusters",
+      "uganda": "Export/raw sand and imports of finished glass; Diimu sheet-glass project not commissioned",
+      "source_ids": ["dgsm-2024-mineral-potential", "watchdog-diimu-2025"]
+    },
+    {
+      "dimension": "Post-mining landscape",
+      "lommel": "Lommelse Sahara nature reserve; quarry lakes",
+      "uganda": "Wetland loss and open pits (Lwera); NEMA wetland permit suspension (reported)",
+      "source_ids": ["lommelse-sahara-natuurpunt", "mak-lwera-wetland-gis", "nema-lwera-restoration-press"]
+    },
+    {
+      "dimension": "Large-scale solar precedent",
+      "lommel": "Kristal Solar Park 99.5 MW ground-mounted (Kristalpark III)",
+      "uganda": "No equivalent industrial PV cluster documented at glass-sand sites",
+      "source_ids": ["lommel-kristal-solar"]
+    },
+    {
+      "dimension": "Floating PV on quarry water",
+      "lommel": "7 MWp Floating PV, Sibelco De Schans (Mol/Dessel) — not Kristal",
+      "uganda": "Not deployed; policy option on closed pits only after EIA",
+      "source_ids": ["sibelco-floating-pv", "irena-fpv-2020"]
+    },
+    {
+      "dimension": "Mining financial assurance",
+      "lommel": "EU/Flemish environmental and quarry rehabilitation frameworks",
+      "uganda": "Mining and Minerals Act 2022: closure plans, progressive rehab, bonds/guarantees",
+      "source_ids": ["uganda-mining-act-2022"]
+    },
+    {
+      "dimension": "Sand mining ecological studies (Uganda-specific)",
+      "lommel": "—",
+      "uganda": "GIS evidence of wetland fragmentation (Lwera); sediment HM studies (Port Bell)",
+      "source_ids": ["mak-lwera-wetland-gis", "mdpi-port-bell-sediments"]
+    }
+  ]
+}

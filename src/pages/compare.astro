@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import matrix from '../data/comparative-matrix.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+---
+
+<BaseLayout
+  title="Comparative matrix"
+  description="Verified Lommel vs Uganda comparison cells with bibliography links."
+  current="compare"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Evidence table</p>
+    <h1>{matrix.meta.title}</h1>
+    <p>{matrix.meta.note}</p>
+  </section>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Lommel / Belgium</th>
+          <th>Uganda</th>
+          <th>Sources</th>
+        </tr>
+      </thead>
+      <tbody>
+        {matrix.rows.map((row) => (
+          <tr>
+            <td><strong>{row.dimension}</strong></td>
+            <td>{row.lommel}</td>
+            <td>{row.uganda}</td>
+            <td>
+              <ul class="source-list">
+                {row.source_ids.map((sid) => {
+                  const ref = bibById[sid];
+                  return (
+                    <li>
+                      {ref ? (
+                        <a href={ref.url} title={ref.title}>{sid}</a>
+                      ) : (
+                        <code>{sid}</code>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<style>
+  .source-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.85rem;
+  }
+</style>

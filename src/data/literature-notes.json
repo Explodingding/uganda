@@ -1,0 +1,80 @@
+[
+  {
+    "source_id": "dgsm-2024-mineral-potential",
+    "summary": "Authoritative national inventory: exploration status, localities, and reported grades/reserves for metallic and industrial minerals.",
+    "key_findings": [
+      "Glass sand at Diimu, Malembo, Bukakata; DGSM cites up to 99.95% SiO₂ at Kome and 99.93% at Diimu/Bukakata (government figures — require independent assay for thesis tables).",
+      "Iron ore, phosphate (Sukulu), tin, gold, and niobium/tantalite listed with district-level occurrences."
+    ],
+    "limitations": "Reserve figures are national survey estimates, not bankable feasibility studies.",
+    "use_in_thesis": "Chapter 2 — Uganda resource endowment; Table of localities."
+  },
+  {
+    "source_id": "nerc-wc92078",
+    "summary": "BGS industrial mineral assessment with laboratory analyses for Diimu beach sand sample.",
+    "key_findings": [
+      "Sample ~99.7% SiO₂; grains mostly 125–500 µm; Mukinda (1973) cited as finding deposit 'generally too coarse' for glass — grain size matters as much as chemistry."
+    ],
+    "limitations": "Single sample; historical processing technology has changed.",
+    "use_in_thesis": "Methods section — why grain-size distribution must be re-sampled."
+  },
+  {
+    "source_id": "delve-2018-baseline-vol1",
+    "summary": "Field-based development minerals baseline across 22 districts; value chain focus on sand, stone, clay, dimension stone.",
+    "key_findings": [
+      "Hundreds of active/abandoned sand and aggregate sites; formalization and OHS gaps.",
+      "Masaka region sand mining linked to construction demand, not integrated glass industry."
+    ],
+    "limitations": "2017 field season; policy landscape updated by 2022 Act.",
+    "use_in_thesis": "Socio-economic chapter; contrast glass-grade vs construction sand markets."
+  },
+  {
+    "source_id": "mak-lwera-wetland-gis",
+    "summary": "Makerere dissertation: GIS/remote sensing of wetland loss linked to sand mining in Lwera (Lake Victoria basin), 2010–2019.",
+    "key_findings": [
+      "Sand mining footprint expanded; wetland patch metrics degraded over study period.",
+      "Lwera is in greater Masaka — relevant to lacustrine governance stream, not only Diimu."
+    ],
+    "limitations": "Thesis — cite as grey literature; complement with NEMA policy documents.",
+    "use_in_thesis": "Environmental impacts chapter (lacustrine/wetland)."
+  },
+  {
+    "source_id": "mdpi-port-bell-sediments",
+    "summary": "Peer-reviewed sediment contamination and health-risk framing at Port Bell (Lake Victoria, Uganda).",
+    "key_findings": [
+      "Discusses dredging/lake sand mining in context of heavy metals in sediments.",
+      "Ecological risk indices flagged for some elements (e.g. Cd) — site-specific."
+    ],
+    "limitations": "Port Bell ≠ Diimu; do not generalize chemistry across the lake.",
+    "use_in_thesis": "Environmental risk assessment methods."
+  },
+  {
+    "source_id": "sibelco-history-1872",
+    "summary": "Corporate history: Kempen canal discovery (1860s), SCR founded 1872, Emsens land acquisitions in Lommel.",
+    "key_findings": [
+      "Value chain began with local glass/crystal makers before export scale-up.",
+      "Mechanization and mergers consolidated Campine operators into modern Sibelco."
+    ],
+    "limitations": "Corporate narrative — cross-check with independent environmental history.",
+    "use_in_thesis": "Lommel historical industrialization chapter."
+  },
+  {
+    "source_id": "lommelse-sahara-natuurpunt",
+    "summary": "NGO description of post-mining nature reserve (heathland, forests, lakes).",
+    "key_findings": [
+      "Demonstrates long-horizon ecological restoration as public amenity."
+    ],
+    "limitations": "Management outcomes ≠ automatic template for tropical wetlands.",
+    "use_in_thesis": "Restoration policy comparison."
+  },
+  {
+    "source_id": "irena-fpv-2020",
+    "summary": "Global floating solar outlook: cooling, land use, ecological considerations.",
+    "key_findings": [
+      "Supports thermodynamic argument for water-cooled PV on suitable water bodies.",
+      "Stresses site-specific environmental assessment."
+    ],
+    "limitations": "Not Uganda-specific.",
+    "use_in_thesis": "Energy technology review."
+  }
+]
