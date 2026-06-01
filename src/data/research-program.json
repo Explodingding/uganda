@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "title": "Deep research program",
+    "version": "1.0",
+    "purpose": "Doctoral-grade agenda: questions, methods, data gaps, and deliverables. No claims without sources."
+  },
+  "streams": [
+    {
+      "id": "comparative-value-chain",
+      "title": "Comparative value chains: Lommel ↔ Lake Victoria silica",
+      "summary": "Test whether Uganda can replicate integrated extraction–processing–manufacturing without repeating Flanders' early environmental damage.",
+      "research_questions": [
+        "What purity, grain-size, and wash-plant specifications does container vs. float glass require at each Ugandan locality (Diimu, Bukakata, Kome)?",
+        "What is the current cost structure of imported glass vs. a domestic plant at Lake Victoria logistics distances?",
+        "Which Lommel-era policy instruments (zoning, export levies on raw sand, cluster parks) are transferable under the Mining and Minerals Act, 2022?"
+      ],
+      "methods": [
+        "Systematic literature review (DGSM, BGS/NORA, peer-reviewed geochemistry)",
+        "Comparative case study (Lommel/Kristalpark, Mol/Dessel FPV, Masaka/Diimu project archives)",
+        "Stakeholder interviews (DGSM, NEMA, local government, artisanal miners) — fieldwork required"
+      ],
+      "required_primary_data": [
+        "Site-specific assay certificates (ISO-accredited labs)",
+        "Uganda import statistics for glass and containers (UBOS / trade codes HS 7010–7019)",
+        "Feasibility/EIA documents for stalled Diimu glass projects"
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential", "nerc-wc92078", "lommel-kristal-solar", "sibelco-floating-pv"],
+      "status": "desk_research_started",
+      "deliverables": ["Literature review chapter", "Comparative matrix (verified cells only)", "Policy transferability memo"]
+    },
+    {
+      "id": "lacustrine-governance",
+      "title": "Lacustrine extraction & concurrent reclamation",
+      "summary": "Lake Victoria shores are ecologically unlike closed Campine quarries; reclamation models must be lake-specific.",
+      "research_questions": [
+        "How do artisanal and industrial sand lifts affect nearshore bathymetry, papyrus wetlands, and Nile perch spawning grounds?",
+        "Can concurrent reclamation bonds be calibrated using restoration costs from comparable African Great Lakes cases?",
+        "What post-mining uses (wetland restoration, regulated aquaculture, eco-tourism) are ecologically defensible per site?"
+      ],
+      "methods": [
+        "Environmental impact assessment meta-analysis",
+        "Hydrological modelling (requires bathymetry + extraction rates)",
+        "Legal analysis of progressive rehabilitation clauses in Act 2022"
+      ],
+      "required_primary_data": [
+        "NEMA EIA registers for Masaka/Mukono/Buvuma sand operations",
+        "Lake Victoria Fisheries Organisation catch statistics by landing site",
+        "Drone/LIDAR shoreline change datasets"
+      ],
+      "source_ids": ["delve-2018-baseline-vol1", "uganda-mining-act-2022", "unep-development-minerals"],
+      "status": "requires_field_and_government_data",
+      "deliverables": ["Reclamation protocol draft", "Risk map (only after georeferenced data)"]
+    },
+    {
+      "id": "energy-industrial-symbiosis",
+      "title": "Renewable energy co-location with industry",
+      "summary": "Separate Belgian precedents: ground-mounted industrial PV (Kristal) vs. quarry-lake FPV (Mol/Dessel).",
+      "research_questions": [
+        "For Uganda's equatorial climate, what is the modelled ΔT_cell and LCOE difference between land PV, rooftop PV, and FPV on closed pits vs. open lake bodies?",
+        "Can glass furnaces and sand washing plants be feasibly supplied from dedicated renewable PPAs under current UETCL tariff rules?",
+        "Under which conditions does FPV on Lake Victoria fail ecological screening (fisheries, water quality)?"
+      ],
+      "methods": [
+        "Techno-economic modelling (PVSyst or SAM) with local irradiance data",
+        "Thermodynamic review using temperature coefficient literature (IRENA)",
+        "Multi-criteria decision analysis (energy yield vs. ecological risk)"
+      ],
+      "required_primary_data": [
+        "NASA POWER or Global Solar Atlas hourly data for target districts",
+        "Industrial load profiles for hypothetical glass plant",
+        "Water-body classification (quarry lake vs. lacustrine)"
+      ],
+      "source_ids": ["irena-fpv-2020", "lommel-kristal-solar", "sibelco-floating-pv"],
+      "status": "modelling_ready",
+      "deliverables": ["Methods paper section on FPV suitability criteria", "Decision tree for planners"]
+    },
+    {
+      "id": "development-minerals-balance",
+      "title": "Beyond silica: balanced development minerals portfolio",
+      "summary": "Less commercialized regions can prioritize limestone, clay, dimension stone, and salt with formalization—not only glass sand.",
+      "research_questions": [
+        "Which development minerals offer the highest local employment per unit environmental disturbance?",
+        "How do DELVE-documented artisanal sites overlap with protected wetlands or forest reserves?",
+        "What small-scale technologies raise value addition without megaproject capital?"
+      ],
+      "methods": [
+        "Value chain analysis (DELVE methodology)",
+        "Spatial overlay with protected area GIS (WCMC/UGA shapefiles)",
+        "Socio-economic surveys in quarry communities"
+      ],
+      "required_primary_data": [
+        "District production volumes where available",
+        "Community household income baselines"
+      ],
+      "source_ids": ["delve-2018-baseline-vol1", "dgsm-2024-mineral-potential", "unep-development-minerals"],
+      "status": "catalogued",
+      "deliverables": ["Regional development mineral strategy brief", "Expanded catalog entries with citations"]
+    },
+    {
+      "id": "circular-glass",
+      "title": "Circular glass and import substitution",
+      "summary": "European cullet integration reduces melting energy; Uganda lacks formal collection systems—design question, not assumption.",
+      "research_questions": [
+        "What share of packaging glass is imported vs. domestically produced today (trade data)?",
+        "What collection logistics work in Kampala/Jinja informal economies?",
+        "What energy and CO₂ reductions are realistic at X% cullet inclusion?"
+      ],
+      "methods": [
+        "Material flow analysis",
+        "Life-cycle assessment (cradle-to-gate) once plant parameters exist",
+        "Policy review (extended producer responsibility feasibility)"
+      ],
+      "required_primary_data": [
+        "UBOS trade statistics",
+        "Waste audit samples from municipalities",
+        "Furnace technology choice for hypothetical plant"
+      ],
+      "source_ids": ["dgsm-2024-mineral-potential"],
+      "status": "data_gap_trade_statistics",
+      "deliverables": ["Circular economy scenario model", "Policy options paper"]
+    }
+  ],
+  "agent_capabilities": {
+    "can_do_now": [
+      "Expand bibliography with DOI/URL verification and BibTeX export",
+      "Add research-stream pages, comparative tables, and annotated literature notes in the repo",
+      "Structure catalog entries for additional DGSM-documented minerals (gold, copper, tin, REE where cited)",
+      "Draft literature-review prose with inline source_ids (you verify before thesis submission)",
+      "Build static visualizations from CSV/JSON you provide (production, assays, trade)",
+      "Fact-check draft chapters against fact-checks.json and flag unsupported claims",
+      "Prepare Netlify previews for each research branch via GitHub PRs"
+    ],
+    "needs_human_or_institution": [
+      "New geochemical assays, EIAs, bathymetry, or shoreline GPS surveys",
+      "Interviews with DGSM, NEMA, district officials, miners (ethics approval)",
+      "Official import/export datasets not published online",
+      "Legally binding policy commitments or bond calculations signed by government"
+    ],
+    "cannot_ethically_do": [
+      "Invent reserve tonnages, purity percentages, or economic projections without a cited document",
+      "Present news articles as peer-reviewed evidence",
+      "Recommend specific concession boundaries without spatial data and community consent processes"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import program from '../data/research-program.json';
+import bibliography from '../data/bibliography.json';
+
+const bibById = Object.fromEntries(bibliography.map((b) => [b.id, b]));
+---
+
+<BaseLayout
+  title="Deep research program"
+  description="Doctoral research streams, methods, data gaps, and what can be done next with this portal."
+  current="research"
+>
+  <section class="hero">
+    <p class="hero__eyebrow">Phase 2 · Evidence-based depth</p>
+    <h1>What deeper research can do here</h1>
+    <p>
+      This page turns the Lommel–Uganda comparison into a <strong>research program</strong>: explicit
+      questions, methods, data you must collect in the field, and deliverables suitable for a doctorate.
+      The portal is the living repository — not a substitute for primary data.
+    </p>
+    <p>
+      <a href="/references.bib" download>BibTeX export</a> for Zotero / LaTeX ·
+      <a href="/methodology">Methodology</a> ·
+      <a href="/catalog">Resource catalog</a>
+    </p>
+  </section>
+
+  <article class="card">
+    <h2>What I (your AI + repo workflow) can do</h2>
+    <ul>
+      {program.agent_capabilities.can_do_now.map((item) => <li>{item}</li>)}
+    </ul>
+  </article>
+
+  <article class="card">
+    <h2>What requires your friend, labs, or government</h2>
+    <ul>
+      {program.agent_capabilities.needs_human_or_institution.map((item) => <li>{item}</li>)}
+    </ul>
+  </article>
+
+  <div class="notice">
+    <strong>Hard limit:</strong>
+    {program.agent_capabilities.cannot_ethically_do.join(' ')}
+  </div>
+
+  {program.streams.map((stream) => (
+    <article class="card" id={stream.id}>
+      <h2>{stream.title}</h2>
+      <p><span class="tag">Status: {stream.status.replace(/_/g, ' ')}</span></p>
+      <p>{stream.summary}</p>
+
+      <h3>Research questions</h3>
+      <ol>
+        {stream.research_questions.map((q) => <li>{q}</li>)}
+      </ol>
+
+      <h3>Methods</h3>
+      <ul>
+        {stream.methods.map((m) => <li>{m}</li>)}
+      </ul>
+
+      <h3>Primary data still needed</h3>
+      <ul>
+        {stream.required_primary_data.map((d) => <li>{d}</li>)}
+      </ul>
+
+      <h3>Target deliverables</h3>
+      <ul>
+        {stream.deliverables.map((d) => <li>{d}</li>)}
+      </ul>
+
+      <h3>Starting sources</h3>
+      <ul>
+        {stream.source_ids.map((sid) => {
+          const ref = bibById[sid];
+          return (
+            <li>
+              {ref ? <a href={ref.url}>{ref.title}</a> : <code>{sid}</code>}
+            </li>
+          );
+        })}
+      </ul>
+    </article>
+  ))}
+</BaseLayout>

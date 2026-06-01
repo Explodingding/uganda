@@ -87,5 +87,21 @@
     "title": "Innovation Outlook: Floating Solar",
     "url": "https://www.irena.org/publications/2019/Oct/Innovation-outlook-floating-solar",
     "notes": "Thermodynamic cooling and land-use benefits of floating PV — use for equations and global context."
+  },
+  {
+    "id": "eiti-uganda",
+    "type": "transparency_initiative",
+    "authors": "EITI International Secretariat / Uganda EITI",
+    "title": "Uganda EITI — extractive sector transparency reports",
+    "url": "https://eiti.org/uganda",
+    "notes": "Production, licensing, and revenue data for oil, gas, and mining — use for macro context; cross-check with DGSM."
+  },
+  {
+    "id": "ubos-statistics",
+    "type": "government_data",
+    "authors": "Uganda Bureau of Statistics (UBOS)",
+    "title": "UBOS — national statistics (trade, industry)",
+    "url": "https://www.ubos.org/",
+    "notes": "Required for import substitution claims (glass HS codes) — pull specific tables before citing numbers."
   }
 ]
